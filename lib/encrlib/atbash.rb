@@ -29,7 +29,6 @@ module Encrlib
       def atbash_cipher(str)
         str.each_char.map { |ch| atbash_symbch(ch) }.join
       end
-
     end
   end
 end
