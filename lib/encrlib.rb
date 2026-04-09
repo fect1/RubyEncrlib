@@ -5,3 +5,7 @@ require_relative 'encrlib/caesar'
 require_relative 'encrlib/playfair'
 require_relative 'encrlib/rail_fence'
 require_relative 'encrlib/viginere'
+
+module Encrlib
+
+end
