@@ -44,35 +44,35 @@ class PlayfairCipherTest < Minitest::Test
   ].freeze
 
   def test_playfair_decrypts_english_text_upper
-    assert_equal 'HELP', playfair_decipher('KGAL', LETTER_MATRIX_ENGLISH_UPPER)
+    assert_equal 'HELP', Encrlib::Playfair.playfair_decipher('KGAL', LETTER_MATRIX_ENGLISH_UPPER)
   end
 
   def test_playfair_decrypts_english_text_lower
-    assert_equal 'help', playfair_decipher('kgal', LETTER_MATRIX_ENGLISH_LOWER)
+    assert_equal 'help', Encrlib::Playfair.playfair_decipher('kgal', LETTER_MATRIX_ENGLISH_LOWER)
   end
 
   def test_playfair_decrypts_russian_text_upper
-    assert_equal 'ПРИВЕТМИР', playfair_decipher('ЛФЗГЗРОЖХА', LETTER_MATRIX_RUSSIAN_UPPER)
+    assert_equal 'ПРИВЕТМИР', Encrlib::Playfair.playfair_decipher('ЛФЗГЗРОЖХА', LETTER_MATRIX_RUSSIAN_UPPER)
   end
 
   def test_playfair_decrypts_russian_text_lower
-    assert_equal 'приветмир', playfair_decipher('лфзгзрожха', LETTER_MATRIX_RUSSIAN_LOWER)
+    assert_equal 'приветмир', Encrlib::Playfair.playfair_decipher('лфзгзрожха', LETTER_MATRIX_RUSSIAN_LOWER)
   end
 
   def test_playfair_handles_odd_length
-    assert_equal 'WORLD', playfair_decipher('VQGRCZ', LETTER_MATRIX_ENGLISH_UPPER)
+    assert_equal 'WORLD', Encrlib::Playfair.playfair_decipher('VQGRCZ', LETTER_MATRIX_ENGLISH_UPPER)
   end
 
   def test_playfair_handles_double_letters
-    assert_equal 'BALLOON', playfair_decipher('HBYVRVQO', LETTER_MATRIX_ENGLISH_UPPER)
+    assert_equal 'BALLOON', Encrlib::Playfair.playfair_decipher('HBYVRVQO', LETTER_MATRIX_ENGLISH_UPPER)
   end
 
   def test_playfair_removes_spaces
-    assert_equal playfair_decipher('HELLOWORLD', LETTER_MATRIX_ENGLISH_UPPER),
-                 playfair_decipher('HELLO WORLD', LETTER_MATRIX_ENGLISH_UPPER)
+    assert_equal Encrlib::Playfair.playfair_decipher('HELLOWORLD', LETTER_MATRIX_ENGLISH_UPPER),
+                 Encrlib::Playfair.playfair_decipher('HELLO WORLD', LETTER_MATRIX_ENGLISH_UPPER)
   end
 
   def test_playfair_handles_digits
-    assert_equal '1234', playfair_decipher('2307', DIGIT_MATRIX)
+    assert_equal '1234', Encrlib::Playfair.playfair_decipher('2307', DIGIT_MATRIX)
   end
 end
