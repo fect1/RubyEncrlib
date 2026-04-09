@@ -13,10 +13,5 @@ jobs:
           ruby-version: '4.0.1'
           bundler-cache: false
 
-      - name: Install gems
-        run: |
-          bundle config set frozen false
-          bundle install --jobs 4 --retry 3
-
       - name: Run Rake
         run: bundle exec rake
