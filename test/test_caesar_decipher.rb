@@ -11,7 +11,9 @@ class CaesarCipherTest < Minitest::Test
 
   def test_caesar_encrypts_russian_alphabet
     assert_equal 'абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ',
-                 Encrlib::Caesar.caesar_decipher('йклмнопрстуфхцчшщъыьэюяабвгдеёжзиЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИ', 10)
+                 Encrlib::Caesar.caesar_decipher(
+                   'йклмнопрстуфхцчшщъыьэюяабвгдеёжзиЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЁЖЗИ', 10
+                 )
   end
 
   def test_caesar_encrypts_digits
