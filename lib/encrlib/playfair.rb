@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-module Encrlib
-  class Playfair
-    class << self
 def ch_search(key)
   upper_rus = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
   lower_rus = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
@@ -21,6 +18,9 @@ def ch_search(key)
   ch
 end
 
+module Encrlib
+  class Playfair
+    class << self
 def xy_selector; end
 
 # string encryption with Playfair cipher/Шифрование строки методом Плейфера
