@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+module Encrlib
+  class Viginere
+    class << self
 def viginere_symbol_key_search(sym, key)
   upper_rus = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
   lower_rus = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
@@ -87,3 +90,5 @@ def viginere_decipher(str, key)
   end
   decstr
 end
+    end
+  end end

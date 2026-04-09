@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+module Encrlib
+  class Caesar
+    class << self
 # @param [String] sym
 # @param [integer] key
 def caesar_symbch(sym, key)
@@ -39,3 +42,7 @@ end
 def caesar_decipher(str, key)
   caesar_cipher(str, -key)
 end
+    end
+  end
+end
+

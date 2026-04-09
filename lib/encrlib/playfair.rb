@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+module Encrlib
+  class Playfair
+    class << self
 def ch_search(key)
   upper_rus = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
   lower_rus = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
@@ -117,4 +120,7 @@ def playfair_decipher(str, key)
     x += 1
   end
   encstr
+end
+    end
+  end
 end
